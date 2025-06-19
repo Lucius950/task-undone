@@ -1,143 +1,104 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Bento grid</title>
-
-  Feel free to remove these styles or customise in your own stylesheet 👍
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Social Media 10x Faster with AI
-  Over 4,000 5-star reviews
-
-  Manage multiple accounts and platforms.
-
-  Maintain a consistent posting schedule.
-
-  Schedule to social media.
-  Optimize post timings to publish content at the perfect time for your audience.
-  
-  Grow followers with non-stop content.
-
-  >56% faster audience growth
-  
-  Create and schedule content quicker.
-
-  Write your content using AI.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
-</html> --> 
-
-
-
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Social Media AI Landing</title>
-  <link rel="stylesheet" href="rn.css">
-</head>
-<body>
-
-  <div class="grid-container">
-
-    <!-- Hero Banner -->
-    <div class="hero">
-      <h1>Social Media <span class="highlight">10x</span><br>Faster with AI</h1>
-      <div class="stars">★★★★★</div>
-      <p class="sub">Over 4,000 5-star reviews</p>
-    </div>
-
-    <!-- Create Content Card -->
-    <div class="card yellow">
-      <h2>Create and schedule content <strong>quicker.</strong></h2>
-      <button class="btn">Create Post ➤</button>
-    </div>
-
-    <!-- Best Time to Post -->
-    <div class="card purple small">
-      <h3>Schedule to social media.</h3>
-      <p class="small-title">Best Time to Post</p>
-      <div class="bar-chart">
-        <div class="bar" style="height:40%;"></div>
-        <div class="bar" style="height:70%;"></div>
-        <div class="bar" style="height:55%;"></div>
-        <div class="bar" style="height:65%;"></div>
-        <div class="bar" style="height:50%;"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Social Media AI Landing</title>
+    <link rel="stylesheet" href="rn.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Hero Banner -->
+      <div class="hero">
+        <h1>
+          Social Media <span class="highlight">10x</span><br />Faster with AI
+        </h1>
+        <div class="stars">★★★★★</div>
+        <p class="sub">Over 4,000 5-star reviews</p>
       </div>
-      <p class="caption">
-        Optimize post timings to publish content at the perfect time for your audience.
-      </p>
-    </div>
 
-    <!-- Write with AI -->
-    <div class="card yellow chat">
-      <h2>Write your content using AI.</h2>
-      <div class="chat-box">
-        <p><em>Give me 5 tips to grow my followers on Instagram</em></p>
-        <p><strong>AI:</strong> Certainly! Here are five tips to help you grow your Instagram…</p>
+      <!-- Create Content Card -->
+      <div class="card yellow">
+        <h2>Create and schedule content <strong>quicker.</strong></h2>
+        <button class="btn">Create Post ➤</button>
       </div>
-    </div>
 
-    <!-- Manage Accounts -->
-    <div class="card white">
-      <h2>Manage multiple accounts and platforms.</h2>
-    </div>
+      <!-- Best Time to Post -->
+      <div class="card purple small">
+        <h3>Schedule to social media.</h3>
+        <p class="small-title">Best Time to Post</p>
+        <div class="bar-chart">
+          <div class="bar" style="height: 40%"></div>
+          <div class="bar" style="height: 70%"></div>
+          <div class="bar" style="height: 55%"></div>
+          <div class="bar" style="height: 65%"></div>
+          <div class="bar" style="height: 50%"></div>
+        </div>
+        <p class="caption">
+          Optimize post timings to publish content at the perfect time for your
+          audience.
+        </p>
+      </div>
 
-    <!-- Consistent Schedule -->
-    <div class="card yellow small">
-      <h3>Maintain a consistent posting schedule.</h3>
-      <div class="calendar">
-        <span>August 2024</span>
-        <div class="weekdays">
-          <div>—</div><div>✓</div><div>✓</div><div>✓</div><div>✓</div>
+      <!-- Write with AI -->
+      <div class="card yellow chat">
+        <h2>Write your content using AI.</h2>
+        <div class="chat-box">
+          <p><em>Give me 5 tips to grow my followers on Instagram</em></p>
+          <p>
+            <strong>AI:</strong> Certainly! Here are five tips to help you grow
+            your Instagram…
+          </p>
         </div>
       </div>
-    </div>
 
-    <!-- Growth Stat -->
-    <div class="card white stat">
-      <h1>&gt;56%</h1>
-      <p>faster audience growth</p>
-      <div class="avatars">
-        <div class="avatar">👩</div>
-        <div class="avatar">👨</div>
-        <div class="avatar">🧑</div>
+      <!-- Manage Accounts -->
+      <div class="card white">
+        <h2>Manage multiple accounts and platforms.</h2>
       </div>
-    </div>
 
-    <!-- Followers Growth -->
-    <div class="card blue">
-      <div class="stats">
-        <div>
-          <h3>20,642</h3>
-          <p>+48%</p>
-        </div>
-        <div class="bar-chart small">
-          <div class="bar" style="height:50%;"></div>
-          <div class="bar" style="height:70%;"></div>
-          <div class="bar" style="height:60%;"></div>
-          <div class="bar" style="height:80%;"></div>
+      <!-- Consistent Schedule -->
+      <div class="card yellow small">
+        <h3>Maintain a consistent posting schedule.</h3>
+        <div class="calendar">
+          <span>August 2024</span>
+          <div class="weekdays">
+            <div>—</div>
+            <div>✓</div>
+            <div>✓</div>
+            <div>✓</div>
+            <div>✓</div>
+          </div>
         </div>
       </div>
-      <h2>Grow followers with non-stop content.</h2>
+
+      <!-- Growth Stat -->
+      <div class="card white stat">
+        <h1>&gt;56%</h1>
+        <p>faster audience growth</p>
+        <div class="avatars">
+          <div class="avatar">👩</div>
+          <div class="avatar">👨</div>
+          <div class="avatar">🧑</div>
+        </div>
+      </div>
+
+      <!-- Followers Growth -->
+      <div class="card blue">
+        <div class="stats">
+          <div>
+            <h3>20,642</h3>
+            <p>+48%</p>
+          </div>
+          <div class="bar-chart small">
+            <div class="bar" style="height: 50%"></div>
+            <div class="bar" style="height: 70%"></div>
+            <div class="bar" style="height: 60%"></div>
+            <div class="bar" style="height: 80%"></div>
+          </div>
+        </div>
+        <h2>Grow followers with non-stop content.</h2>
+      </div>
     </div>
-
-  </div>
-
-</body>
+  </body>
 </html>

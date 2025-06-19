@@ -39,8 +39,8 @@ body { font-family: 'Arial', sans-serif; background: #f7f8fb; color: #333; paddi
 
 .col { display: flex; flex-direction: column; gap: 20px; flex: 1; } */
 
- /* Reset & base */
- * {
+/* Reset & base */
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -62,37 +62,35 @@ body {
 
 /* /* Hero spans all columns * */
 .hero {
-  /* grid-column: 1 / -1;
-  grid-row: 2 / -1; */
-  grid-template-columns: 1 / -1; 
-  background: #3b82f6;
+  grid-column: 1 / -1;
+  background: #7650dc;
   color: #fff;
-  /* padding: 30px; */
-  border-radius: 4px;
   text-align: center;
+  border-radius: .2rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;  /* accomodates responsiveness to all screen devices*/
+  width: 420px;
+  padding: 2rem;
+  margin: 0 auto; 
 
-   justify-content: center;
-  align-items: center; 
-  flex-shrink: 1;
-  flex-basis: 150px; 
-  height: 10px;
-  max-width: 20px ; 
 }
+
 .hero .highlight {
   color: #fbbf24;
 }
+
 .hero .stars {
   font-size: 1.2em;
   margin: 10px 0;
   color: #fbbf24;
 }
+
 .hero .sub {
   opacity: 0.8;
 }
 
- Cards 
-.card {
-  
+Cards .card {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
@@ -101,29 +99,42 @@ body {
   left: 0;
 }
 
-.card.yellow { background: #fbbf24; color: #333;
-position: relative;
-top: 0;
-left: 0;
+.card.yellow {
+  background: #fbbf24;
+  color: #333;
+  position: relative;
+  top: 0;
+  left: 0;
 }
-.card.blue   { background: #3b82f6; color: #fff; }
-.card.purple { background: #c4b5fd; color: #333; }
+.card.blue {
+  background: #3b82f6;
+  color: #fff;
+}
+.card.purple {
+  background: #c4b5fd;
+  color: #333;
+}
 
-.card.small { font-size: 0.9em; }
-.card.chat { display: flex; flex-direction: column; }
+.card.small {
+  font-size: 0.9em;
+}
+.card.chat {
+  display: flex;
+  flex-direction: column;
+}
 
-.card h2, .card h3 {
+.card h2,
+.card h3 {
   margin-bottom: 10px;
-   display: flex;
+  display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
   top: 0;
-  left: 0; 
+  left: 0;
 }
 
- Buttons 
-.btn {
+Buttons .btn {
   background: #fff;
   color: inherit;
   border: none;
@@ -133,8 +144,7 @@ left: 0;
   font-weight: bold;
 }
 
- Bar charts 
-.bar-chart {
+Bar charts .bar-chart {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -142,7 +152,9 @@ left: 0;
   height: 80px;
   margin: 10px 0;
 }
-.bar-chart.small { height: 50px; }
+.bar-chart.small {
+  height: 50px;
+}
 .bar {
   flex: 1;
   background: currentColor;
@@ -150,18 +162,16 @@ left: 0;
   border-radius: 4px 4px 0 0;
 }
 
- Chat box 
-.chat-box {
-  background: rgba(255,255,255,0.8);
+Chat box .chat-box {
+  background: rgba(255, 255, 255, 0.8);
   padding: 10px;
   border-radius: 8px;
   font-size: 0.85em;
   line-height: 1.4;
 }
 
- Calendar 
-.calendar {
-  background: rgba(255,255,255,0.8);
+Calendar .calendar {
+  background: rgba(255, 255, 255, 0.8);
   padding: 10px;
   border-radius: 8px;
   font-size: 0.85em;
@@ -177,8 +187,7 @@ left: 0;
 }
 
 /* Stats & avatars  */
- .stat 
-{
+.stat {
   text-align: center;
 }
 .stat h1 {
@@ -194,8 +203,7 @@ left: 0;
   font-size: 1.5em;
 }
 
- Followers growth card 
-.stats {
+Followers growth card .stats {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -207,7 +215,6 @@ left: 0;
   font-size: 0.85em;
   opacity: 0.8;
 }
-
 
 /* ========== CSS Variables & Reset ========== *
 
@@ -241,7 +248,7 @@ body {
   padding: 1rem;
 } */
 
- /* ========== Module Base Styles ========== * */
+/* ========== Module Base Styles ========== * */
 /* .module {
   background: white;
   border-radius: 1rem;
