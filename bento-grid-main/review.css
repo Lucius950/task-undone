@@ -1,0 +1,120 @@
+/* Global reset and box-sizing for consistent element sizing8 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container grid: 2 columns on desktop, 1 column on mobile */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "header header"
+    "create write"
+    "maintain grow";
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "create"
+      "write"
+      "maintain"
+      "grow";
+  }
+}
+
+/* Card base style: white bg, rounded corners, drop shadow910 */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+.card h1, .card h2 {
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #333;
+}
+.card p {
+  margin-bottom: 16px;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Assign grid areas to each card */
+.card-header   { grid-area: header; }
+.card-create   { grid-area: create; display: flex; align-items: center; justify-content: center; }
+.card-write    { grid-area: write; }
+.card-maintain { grid-area: maintain; }
+.card-grow     { grid-area: grow; }
+
+/* Header card (blue background) */
+.card-header {
+  background-color: #3A7BFD;
+  color: #fff;
+  text-align: center;
+}
+.card-header h1 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+.card-header p strong {
+  display: block;
+  margin: 12px 0;
+}
+
+/* "Create Post" card icon */
+.icon.plus {
+  background-color: #F0C23B;
+  color: #fff;
+  font-size: 1.5em;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* Colored button styles */
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-yellow {
+  background-color: #F0C23B;
+  color: #333;
+}
+.btn-blue {
+  background-color: #3A7BFD;
+  color: #fff;
+}
+.btn-purple {
+  background-color: #8E44AD;
+  color: #fff;
+}
+
+/* Simple bar chart in Grow Followers card */
+.chart {
+  display: flex;
+  align-items: flex-end;
+  height: 60px;
+  margin-top: 10px;
+  gap: 5px;
+}
+.chart .bar {
+  flex: 1;
+  background-color: #3A7BFD;
+}

@@ -67,6 +67,7 @@ body {
   color: #fff;
   text-align: center;
   border-radius: .2rem;
+  /* box-shadow: 0 4px 8px; */
   justify-content: center;
   align-items: center;
   max-width: 100%;  /* accomodates responsiveness to all screen devices*/
@@ -84,76 +85,152 @@ body {
   font-size: 1.2em;
   margin: 10px 0;
   color: #fbbf24;
+  opacity: 0.9w;
 }
 
 .hero .sub {
   opacity: 0.8;
 }
 
-Cards .card {
-  background: #fff;
+.card.yellow {
+  background: white;
+  width: 190px;
+  height: 300px;
   padding: 20px;
+  margin: 10px auto;
   border-radius: 12px;
-  position: relative;
-  top: 0;
-  left: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+   position: relative;
+   top: -200px;
+   right: -80px;
+   margin-right: auto;
 }
 
-.card.yellow {
-  background: #fbbf24;
-  color: #333;
-  position: relative;
-  top: 0;
-  left: 0;
+.card.create h2, .card.write h2,.manage h2 {
+  font-size: 1.2rem;
 }
-.card.blue {
-  background: #3b82f6;
-  color: #fff;
-}
-.card.purple {
+
+.card.scheduler {
   background: #c4b5fd;
   color: #333;
-}
-
-.card.small {
-  font-size: 0.9em;
-}
-.card.chat {
-  display: flex;
-  flex-direction: column;
-}
-
-.card h2,
-.card h3 {
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  /* width: 300px; */
+  /* height: 00px; */
+  /* text-align: left; */
+   /* margin-top: 100px; */
+  /* margin-bottom: 100px; */
+  margin-right: 100px;
+  margin-left: 100px; 
+  /* margin: 0 auto; */
+  box-shadow: 20px;
   position: relative;
-  top: 0;
-  left: 0;
+  width: 280px;
+  background: #ede7f6;
+  padding: 16px 16px 24px;
+  top: 0; left: 500px; margin-top: -220px; margin-right: 50px
 }
 
-Buttons .btn {
+.card.scheduler >h2 {
+  font-size: 18px;
+  color: #5e35b1;
+  margin-bottom: 12px;
+}
+
+.card.scheduler .inner{
   background: #fff;
-  color: inherit;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
+  border-radius: 12px;
+  padding: 12px;
 }
 
-Bar charts .bar-chart {
+.card.scheduler .days {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.card.scheduler .days span {
+  cursor: pointer;
+  color: #9e9e9e;
+}
+
+.card.scheduler .days span:first-child {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.card.scheduler .chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100px;
+  margin-bottom: 8px;
+}
+
+.card.scheduler .chart .bar {
+  flex: 1;
+  margin: 0 4px;
+  border-radius: 12px;
+  background: #3f51b5;
+  height: 40%;
+  position: relative;
+}
+
+.card.scheduler .chart .bar.active {
+  content: attr(data-time);
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  color: #757575;
+}
+
+.card.scheduler .note {
+  font-size: 12px;
+  color: #424242;
+  line-height: 1.4;
+}
+
+.card.purple {top: 0; left: 500px; margin-top: -220px; margin-right: 50px;}
+/* .card.black {top:0; right: 0; margin-right: -220px;} */
+/* .card.white {top: 0; left: 0;} */
+
+.small-title {
+  /* padding-left: 20px; */
+  /* border: 70px white solid; */
+  /* text-align: left -100px; */
+  /* margin-top: 80px;
+  margin-bottom: 80px;
+  margin-right: 10px;
+  margin-left: 10px; */
+  /* align-items: baseline; */
+  /* max-width: 100%; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 100px;
+  background-color: #fff;
+  /* height: 50px; */
+  }
+
+ 
+.small-title{
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center; */
+  text-align: center;
   gap: 8px;
+  inline-size: none;
+  color: blueviolet;
+  width: 130px;
   height: 80px;
-  margin: 10px 0;
+  margin: 10px;
+  padding: -10px;
+  margin-left: auto;
+  float: none;
 }
 .bar-chart.small {
-  height: 50px;
+  height: 80px;
 }
 .bar {
   flex: 1;
@@ -162,20 +239,105 @@ Bar charts .bar-chart {
   border-radius: 4px 4px 0 0;
 }
 
-Chat box .chat-box {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 0.85em;
-  line-height: 1.4;
+.ai-card {
+  background: #f7b500;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 300px;
+  height: 450px;
+  margin-top: -220px;
+  position: relative;
+  top: 300px;
+  margin-left: -900px;
+  transform: translateY(0);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-Calendar .calendar {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 0.85em;
+.ai-card_header {
+  padding: 24px 16px 16px;
 }
+
+.ai-card_title {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.ai-card_chat {
+  position: relative;
+  background: #ffffff;
+  margin: 0 16px 24px;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.ai-card_avatar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: url('')center/cover no-repeat;
+}
+
+.ai-card_msg--user {
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 16px;
+  padding-right: 48px;
+}
+
+.ai-card_sparkle {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+
+}
+
+.ai-card_msg--bot {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.3;
+  padding-right: 60px;
+}
+
+.ai-card_arrow {
+  position: absolute;
+  right: -20px;
+  bottom: 16px;
+  width: 48px;
+  height: 48px;
+  background: #f7b500;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ai-card_arrow::before {
+  content: '' ;
+  font-size: 1.2rem;
+  color: #5a3ffc;
+}
+
+.btn {
+  margin-top: 15px;
+  background: #f59e0b;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .weekdays {
   display: flex;
   justify-content: space-between;
@@ -186,13 +348,115 @@ Calendar .calendar {
   text-align: center;
 }
 
-/* Stats & avatars  */
-.stat {
-  text-align: center;
+
+.card.blue {
+  background: #3b82f6;
+  color: #fff;
+  position: relative;
+  border-right-width: 100%;
+  border-left: -20px;
+  
 }
-.stat h1 {
-  font-size: 2.5em;
+
+ .stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
+.stats h3 {
+  border: white 2px solid;
+}
+
+.h2 {
+  text-size-adjust: left;
+}
+.stats p {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+body,h2,div, span, nav {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: #212121;
+}
+
+.card { 
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.card header, .card >h2 .card .percentage, .card .subtitle {
+  text-align: left;
+}
+
+.card.stats {
+  background: #fff;
+  position: relative;
+  top: -650px;
+  left: 300px;
+  width: 320px;
+  padding: 20px;
+  margin-top: auto ;
+  margin-left: 200px;
+  margin-right: auto;
+  transform: translateY(0px);
+}
+
+.card.stat header {
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card.stat .icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.card.stats .icon.insta .icon.x {
+  background: #ffc107 url() center/60% no-repeat;}
+
+.card.stats .handle {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.card.stats .handle .name {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.card.stats .handle .subs {
+  display: block;
+  font-size: 12px;
+  color: #757575;
+}
+
+.card.stats h2 {
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 20px 0 10px;
+}
+
+.card.stats .percentage {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.card.stats .subtitle {
+  font-size: 12px;
+  color: #757575;
+  margin-bottom: 16px;
+}
+
+
+
 .avatars {
   display: flex;
   justify-content: center;
@@ -203,240 +467,63 @@ Calendar .calendar {
   font-size: 1.5em;
 }
 
-Followers growth card .stats {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+
+
+.card-Maintain{
+  width: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #FFB347, #FFCC33 100%);
+  top: -30px;
 }
-.stats h3 {
+
+.Maintain-content{
+  padding: 24px 16px;
+}
+
+.title {
   margin: 0;
-}
-.stats p {
-  font-size: 0.85em;
-  opacity: 0.8;
-}
-
-/* ========== CSS Variables & Reset ========== *
-
-/* :root {
-  --blue: #3B63FF;
-  --gold: #F5A623;
-  --lavender: #E0D7FF;
-  --dark-gray: #333;
-  --light-gray: #F9F9F9;
-  --font-sans: 'Helvetica Neue', Arial, sans-serif;
-}
-* {
-  margin: 0; padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: var(--font-sans);
-  background: var(--light-gray);
-  color: var(--dark-gray);
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: #4a2e00;
 }
 
-/* ========== Grid Layout ========== */
-/* .grid-container {
-  display: grid;
-  grid-template-areas:
-    "cta   hero  stats"
-    "writer manage schedule"
-    "growth growth growth";
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-gap: 1rem;
-  padding: 1rem;
-} */
+.posting-card_footer{
+  background: #fff;
+}
 
-/* ========== Module Base Styles ========== * */
-/* .module {
-  background: white;
-  border-radius: 1rem;
-  padding: 1rem;
-} */
-
-/* ========== CTA ========== 
-.m-cta {
-  grid-area: cta;
+.posting-card_header{
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-}
-.m-cta .highlight {
-  color: var(--gold);
-}
-.btn-primary {
-  background: var(--gold);
-  border: none;
-  padding: .75rem 1.5rem;
-  border-radius: 2rem;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-.btn-primary .icon {
-  margin-left: .5rem;
-}
-
-/* ========== Hero ========== *
-.m-hero {
-  grid-area: hero;
-  background: blueviolet;
-  color: white;
-  border-radius: 1rem;
-  text-align: center;
-  padding: 2rem;
-}
-.m-hero .accent {
-  color: var(--gold);
-}
-.m-hero .stars {
-  font-size: 1.25rem;
-  color: #F5A623;
-  margin: .5rem 0;
-}
-.m-hero .subtext {
-  font-size: .9rem;
-  opacity: .8;
-}
-
-/* ========== Stats Chart ========== *
-.m-stats {
-  grid-area: stats;
-  background: var(--lavender);
-}
-.m-stats .tab { display: inline-block; margin-right: .5rem; padding: .25rem .5rem; cursor: pointer; }
-.m-stats .tab.active { font-weight: bold; }
-.m-stats .bar-chart {
-  display: flex; align-items: flex-end; justify-content: space-between;
-  padding: 1rem 0;
-}
-.m-stats .bar {
-  width: 15%;
-  background: var(--blue);
-  border-radius: .5rem  .5rem 0 0;
-  opacity: .6;
-}
-.m-stats .bar.active {
-  opacity: 1;
-}
-.m-stats .caption {
-  font-size: .85rem;
-  opacity: .8;
-  margin-top: .5rem;
-}
-
-/* ========== AI Writer ========== *
-.m-writer {
-  grid-area: writer;
-  background: var(--gold);
-  color: var(--dark-gray);
-}
-.m-writer .chat-box {
-  background: wheat;
-  border-radius: .5rem;
-  padding: .75rem;
-  margin-top: 1rem;
-  position: relative;
-}
-.m-writer .user {
-  font-weight: bold;
-}
-.m-writer .assistant {
-  margin-top: .5rem;
-}
-.m-writer .icon-up {
-  position: absolute; bottom: .5rem; right: .5rem;
-  font-size: 1.25rem;
-}
-
-/* ========== Manage Accounts ========== *
-.m-manage {
-  grid-area: manage;
-  text-align: center;
-}
-.m-manage .social-icons {
-  font-size: 2rem;
-}
-.m-manage .growth {
-  margin: 1rem 0;
-  font-size: 1.5rem;
-}
-.m-manage .growth span {
-  display: block;
-  font-size: .75rem;
-  opacity: .7;
-}
-.m-manage .avatars .avatar {
-  display: inline-block;
-  width: 2rem; height: 2rem;
-  border-radius: 50%;
-  background-size: cover;
-  margin: 0 .25rem;
-}
-.user1 { background-image: url('avatar1.jpg'); }
-.user2 { background-image: url('avatar2.jpg'); }
-.user3 { background-image: url('avatar3.jpg'); }
-
-/* ========== Schedule Tracker ========== *
-.m-schedule {
-  grid-area: schedule;
-  background: var(--gold);
-  color: var(--dark-gray);
-}
-.m-schedule .date-pill {
-  background: white;
-  display: inline-block;
-  border-radius: 1rem;
-  padding: .5rem 1rem;
-  margin: .5rem 0;
-}
-.m-schedule .checklist span {
-  margin-right: .5rem;
-  font-size: 1.25rem;
-}
-
-/* ========== Followers Growth ========== *
-.m-growth {
-  grid-area: growth;
-  background: var(--blue);
-  color: white;
-  display: flex;
   align-items: center;
-  padding: 2rem;
-  border-radius: 1rem;
+  background: #4a90e2;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 500;
 }
-.chart-card {
-  background: white;
-  color: var(--dark-gray);
-  border-radius: 1rem;
-  padding: 1rem;
-  margin-right: 1.5rem;
-  flex-shrink: 0;
+
+.Month.Week{
+  font-weight: 500;
 }
-.chart-header {
+
+.calendar-dots{
   display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  margin-bottom: .5rem;
+  justify-content: space-around;
+  padding: 12px 0 16px;
 }
-.mini-chart {
-  display: flex; align-items: flex-end; justify-content: space-between;
-  height: 4rem;
+
+.dot{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #4a90e2;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
 }
-.mini-chart .bar {
-  width: 15%;
-  background: var(--blue);
-  border-radius: .5rem .5rem 0 0;
-  opacity: .8;
-}
-.chart-card .footer {
-  margin-top: .5rem;
-  text-align: right;
-  font-size: .85rem;
-  opacity: .7;
-}
-.m-growth h3 {
-  font-size: 1.25rem;
-  max-width: 12rem;
-} */
+
